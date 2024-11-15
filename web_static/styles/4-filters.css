@@ -1,0 +1,31 @@
+/* 4-filters.css */
+.filters {
+    color: white;
+    height: 70px;
+    width: 100%; /* of container */
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+}
+
+.filters button {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    background-color: #FF5A5F; /* red shade */
+
+    height: 48px;
+    width: 20%; /* of the filters */
+
+    border-width: 0px 0px 0px 0px;
+    border-radius: 4px;
+
+    /* margin: top right bottom left */
+    /*margin: auto 0px;*/
+    margin-top: 10px;
+    margin-right: -75%;     /*margin-left: 80%;*/
+
+}
+
+button:hover {
+    opacity: 0.9;
+}

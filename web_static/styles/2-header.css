@@ -1,0 +1,10 @@
+/* 2-header.css */
+header {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      top: 0px;
+      background-color: #FF0000;
+      height: 70px;
+      width: 100%;
+}

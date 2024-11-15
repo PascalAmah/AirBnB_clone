@@ -1,0 +1,71 @@
+/* 5-filters.css */
+.filters {
+    background: white;
+    height: 70px;
+    width: 100%; /* of container */
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+}
+
+.filters button {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    background-color: #FF5A5F; /* red shade */
+
+    height: 48px;
+    width: 20%; /* of the filters */
+
+    border-width: 0px 0px 0px 0px;
+    border-radius: 4px;
+
+    /* margin: top right bottom left */
+    /*margin-top: -55px;
+    margin-right: -75%;*/
+    margin-left: auto;
+    margin-top: 11px;
+    /*margin-left: 230px;*/
+    margin-left: 20%;
+    display: inline-block;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.filters h3 {
+    font-weight: 600;
+    /*font-weight:
+    line-height:*/
+}
+
+.filters h4 {
+    font-weight: 400;
+    font-size: 14px;
+    /*margin-left: 0;
+    margin-top: 0;*/
+}
+
+.locations {
+    height: 100%;
+    width: 25%;
+    display: inline-block;
+    top: 0px;
+    position: relative;
+
+    margin-left: 20px;
+    margin-top: -10px;
+    border-right: 1px solid #DDDDDD;
+}
+
+.amenities {
+    height: 100%;
+    width: 25%;
+    display: inline-block;
+    position: relative;
+
+    margin-left: 20px;
+    margin-top: -10px;
+}
