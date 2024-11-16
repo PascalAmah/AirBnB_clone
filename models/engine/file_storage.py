@@ -3,11 +3,6 @@
 import json
 from models.base_model import BaseModel
 from models.user import User
-from models.state import State
-from models.city import City
-from models.place import Place
-from models.amenity import Amenity
-from models.review import Review
 
 
 class FileStorage:
@@ -27,7 +22,7 @@ class FileStorage:
     def new(self, obj):
         """Set in __objects obj with key <obj_class_name>.id"""
         obj_cls_name = obj.__class__.__name__
-        key = "{}.{}".format(obj_cls_name, obj.id)
+        key = f"{obj_cls_name}.{obj.id}"
         FileStorage.__objects[key] = obj
 
     def save(self):
@@ -45,8 +40,12 @@ class FileStorage:
             with open(FileStorage.__file_path, "r", encoding="utf-8") as file:
                 obj_dict = json.load(file)
                 for key, value in obj_dict.items():
-                    class_name, obj_id = key.split('-')
-                    cls = eval(class_name)
-                    instance = cls(**value)
-        except Exception:
-            return
+                    class_name = value.pop("__class__", None)
+                    if class_name and class_name in globals():
+                        cls = globals()[class_name]
+                        instance = cls(**value)
+                        FileStorage.__objects[key] = instance
+        except FileNotFoundError:
+            pass
+        except Exception as e:
+            print(f"Error during reload: {e}")

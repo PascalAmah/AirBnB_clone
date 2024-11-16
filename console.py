@@ -2,12 +2,16 @@
 import cmd
 import models
 from models.base_model import BaseModel
+from models.user import User
 
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter class for HBNB."""
     prompt = "(hbnb) "
-    classes = {"BaseModel": BaseModel}
+    classes = {
+            "BaseModel": BaseModel,
+            "User": User,
+            }
 
     def do_quit(self, arg):
         """Quit command to exit the program."""
