@@ -3,6 +3,11 @@
 import json
 from models.base_model import BaseModel
 from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
 
 
 class FileStorage:
@@ -22,7 +27,7 @@ class FileStorage:
     def new(self, obj):
         """Set in __objects obj with key <obj_class_name>.id"""
         obj_cls_name = obj.__class__.__name__
-        key = f"{obj_cls_name}.{obj.id}"
+        key = f"{obj.__class__.__name__}.{obj.id}"
         FileStorage.__objects[key] = obj
 
     def save(self):
