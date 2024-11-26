@@ -1,15 +1,11 @@
-/* 3-footer.css */
 footer {
-      position: fixed;
-      background: white;
-      height: 60px;
-      width: 100%;
-
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      border-top: 1px solid #CCCCCC;
-
-      padding: 23px;
-      text-align: center;
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  border-top: 1px solid #cccccc;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
 }
